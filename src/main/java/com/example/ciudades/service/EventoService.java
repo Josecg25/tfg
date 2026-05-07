@@ -3,61 +3,51 @@ package com.example.ciudades.service;
 import com.example.ciudades.model.Evento;
 import org.springframework.stereotype.Service;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 import java.util.stream.Collectors;
 
 @Service
 public class EventoService {
 
-    private final List<Evento> eventos = new ArrayList<>();
+    private final Map<Integer, List<Evento>> mapaEventos = new HashMap<>();
 
     public EventoService() {
-        // 10 eventos inventados para Madrid (id 28)
-        eventos.add(new Evento(1L, "Concierto en el Retiro",
-                "Música en directo al aire libre en el Parque del Retiro.",
-                "https://eventos.madrid/retiro-concierto", 28L));
 
-        eventos.add(new Evento(2L, "Feria del Libro",
-                "Encuentro anual con autores, firmas y actividades culturales.",
-                "https://eventos.madrid/feria-libro", 28L));
+        mapaEventos.put(28, List.of(
+                new Evento(
+                        28, 1,
+                        "Monumentos de la ciudad de Madrid",
+                        "Los tipos de monumentos incluidos son: estatuas, grupos escultóricos, fuentes y estanques ornamentales, fuentes monumentales, puertas y arcos triunfales, lápidas y placas conmemorativas, laminas de agua y estanque simples y otros varios.",
+                        "https://datos.madrid.es/dataset/300356-0-monumentos-ciudad-madrid/resource/300356-2-monumentos-ciudad-madrid-json/download/300356-2-monumentos-ciudad-madrid-json.json"
+                ),
+                new Evento(
+                        28, 2,
+                        "Sedes. Centros con Espacios Deportivos.",
+                        "Recopila información de centros e instalaciones que cuentan con espacios deportivos tanto de ámbito público como privado que están publicados en el portal institucional madrid.es.",
+                        "https://datos.madrid.es/dataset/212808-0-espacio-deporte/resource/212808-1-espacio-deporte-json/download/212808-1-espacio-deporte-json.json"
+                )
+        ));
 
-        eventos.add(new Evento(3L, "Exposición de Arte Moderno",
-                "Galería con obras de artistas emergentes.",
-                "https://eventos.madrid/arte-moderno", 28L));
+        mapaEventos.put(6, List.of(
+                new Evento(
+                        6, 1,
+                        "Espacios de la ciudad de Barcelona donde se realiza cine, teatro y conciertos",
+                        "Espacios de la ciudad de Barcelona donde se realiza cine, teatro y conciertos. Incluye auditorios",
+                        "https://opendata-ajuntament.barcelona.cat/data/dataset/beeb12bb-b153-45cb-bf4a-0e579f60912d/resource/a837dfd4-6f8d-4c79-9a45-0de486464e25/download"
+                )
+        ));
 
-        eventos.add(new Evento(4L, "Carrera Popular Madrid",
-                "Evento deportivo abierto a todos los niveles.",
-                "https://eventos.madrid/carrera-popular", 28L));
-
-        eventos.add(new Evento(5L, "Festival Gastronómico",
-                "Degustación de platos típicos y cocina internacional.",
-                "https://eventos.madrid/gastro-fest", 28L));
-
-        eventos.add(new Evento(6L, "Noche de los Museos",
-                "Museos abiertos hasta la madrugada con entrada gratuita.",
-                "https://eventos.madrid/noche-museos", 28L));
-
-        eventos.add(new Evento(7L, "Mercado Medieval",
-                "Puestos artesanales, espectáculos y gastronomía temática.",
-                "https://eventos.madrid/mercado-medieval", 28L));
-
-        eventos.add(new Evento(8L, "Cine de Verano",
-                "Proyecciones al aire libre en diferentes barrios.",
-                "https://eventos.madrid/cine-verano", 28L));
-
-        eventos.add(new Evento(9L, "Festival de Jazz",
-                "Conciertos de jazz en plazas y teatros.",
-                "https://eventos.madrid/jazz-fest", 28L));
-
-        eventos.add(new Evento(10L, "Madrid Gaming Week",
-                "Convención de videojuegos, eSports y tecnología.",
-                "https://eventos.madrid/gaming-week", 28L));
+        mapaEventos.put(46, List.of()); // Valencia sin eventos por ahora
     }
 
-    public List<Evento> obtenerEventosPorCiudad(Long ciudadId) {
-        return eventos.stream()
-                .filter(e -> e.getCiudadId().equals(ciudadId))
+    public List<Evento> getEventosByCiudad(int idCiudad) {
+        return mapaEventos.getOrDefault(idCiudad, Collections.emptyList());
+    }
+
+    public List<Evento> getAllEventos() {
+        return mapaEventos.values()
+                .stream()
+                .flatMap(List::stream)
                 .collect(Collectors.toList());
     }
 }

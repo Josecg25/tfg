@@ -5,5 +5,7 @@ com\example\ciudades\controller\CiudadController.class
 com\example\ciudades\dto\EventoDto.class
 com\example\ciudades\model\Evento.class
 com\example\ciudades\model\Ciudad.class
+com\example\ciudades\service\CategoriaService.class
 com\example\ciudades\service\CiudadService.class
 com\example\ciudades\controller\EventoController.class
+com\example\ciudades\model\Categoria.class

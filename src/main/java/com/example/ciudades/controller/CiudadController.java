@@ -20,7 +20,7 @@ public class CiudadController {
 
     @GetMapping("/ciudades")
     public List<CiudadDto> listarCiudades() {
-        List<Ciudad> ciudades = ciudadService.obtenerCiudades();
+        List<Ciudad> ciudades = ciudadService.getCiudades();
         return ciudades.stream()
                 .map(c -> new CiudadDto(c.getId(), c.getNombre()))
                 .collect(Collectors.toList());

@@ -1,11 +1,11 @@
 package com.example.ciudades.model;
 
-public class Ciudad {
+public class Categoria {
 
     private int id;
     private String nombre;
 
-    public Ciudad(int id, String nombre) {
+    public Categoria(int id, String nombre) {
         this.id = id;
         this.nombre = nombre;
     }

@@ -1,12 +1,10 @@
 package com.example.ciudades.controller;
 
-import com.example.ciudades.dto.EventoDto;
 import com.example.ciudades.model.Evento;
 import com.example.ciudades.service.EventoService;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
-import java.util.stream.Collectors;
 
 @RestController
 @RequestMapping("/eventos")
@@ -18,17 +16,15 @@ public class EventoController {
         this.eventoService = eventoService;
     }
 
-    @GetMapping("/{ciudadId}")
-    public List<EventoDto> obtenerEventos(@PathVariable Long ciudadId) {
-        List<Evento> eventos = eventoService.obtenerEventosPorCiudad(ciudadId);
+    // ✔ Todos los eventos
+    @GetMapping
+    public List<Evento> getAllEventos() {
+        return eventoService.getAllEventos();
+    }
 
-        return eventos.stream()
-                .map(e -> new EventoDto(
-                        e.getId(),
-                        e.getTitulo(),
-                        e.getDescripcion(),
-                        e.getUrl(),
-                        e.getCiudadId()))
-                .collect(Collectors.toList());
+    // ✔ Eventos por ciudad
+    @GetMapping("/{idCiudad}")
+    public List<Evento> getEventosByCiudad(@PathVariable int idCiudad) {
+        return eventoService.getEventosByCiudad(idCiudad);
     }
 }

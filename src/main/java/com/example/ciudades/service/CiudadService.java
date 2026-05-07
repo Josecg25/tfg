@@ -3,16 +3,18 @@ package com.example.ciudades.service;
 import com.example.ciudades.model.Ciudad;
 import org.springframework.stereotype.Service;
 
-import java.util.ArrayList;
 import java.util.List;
 
 @Service
 public class CiudadService {
 
-    public List<Ciudad> obtenerCiudades() {
-        List<Ciudad> ciudades = new ArrayList<>();
-        // Inicialmente solo una ciudad, pero la lista está preparada para más
-        ciudades.add(new Ciudad(28L, "Madrid"));
+    private final List<Ciudad> ciudades = List.of(
+            new Ciudad(28, "MADRID"),
+            new Ciudad(46, "VALENCIA"),
+            new Ciudad(6, "BARCELONA")
+    );
+
+    public List<Ciudad> getCiudades() {
         return ciudades;
     }
 }
