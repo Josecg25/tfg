@@ -1,4 +1,4 @@
-package com.example.ciudades.TfgCiudadesApplication;
+package com.example.ciudades;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -17,4 +17,3 @@ public class TfgCiudadesApplication extends SpringBootServletInitializer {
         SpringApplication.run(TfgCiudadesApplication.class, args);
     }
 }
-
