@@ -52,21 +52,15 @@
         <finalName>tfg-ciudades</finalName>
 
         <plugins>
-            <!-- Plugin de Spring Boot -->
+
+            <!-- ÚNICO plugin Spring Boot, correctamente configurado -->
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <configuration>
-                    <skip>true</skip>
+                    <mainClass>com.example.ciudades.TfgCiudadesApplication</mainClass>
                 </configuration>
             </plugin>
-	        <plugin>
-	            <groupId>org.springframework.boot</groupId>
-	            <artifactId>spring-boot-maven-plugin</artifactId>
-	            <configuration>
-	                <mainClass>com.example.ciudades.TfgCiudadesApplication</mainClass>
-	            </configuration>
-	        </plugin>
 
             <!-- Plugin WAR -->
             <plugin>
@@ -76,6 +70,7 @@
                     <failOnMissingWebXml>false</failOnMissingWebXml>
                 </configuration>
             </plugin>
+
         </plugins>
     </build>
 
