@@ -60,6 +60,13 @@
                     <skip>true</skip>
                 </configuration>
             </plugin>
+	        <plugin>
+	            <groupId>org.springframework.boot</groupId>
+	            <artifactId>spring-boot-maven-plugin</artifactId>
+	            <configuration>
+	                <mainClass>com.example.ciudades.TfgCiudadesApplication</mainClass>
+	            </configuration>
+	        </plugin>
 
             <!-- Plugin WAR -->
             <plugin>

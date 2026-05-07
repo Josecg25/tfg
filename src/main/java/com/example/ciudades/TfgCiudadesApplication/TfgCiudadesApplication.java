@@ -1,4 +1,4 @@
-package com.example.ciudades;
+package com.example.ciudades.TfgCiudadesApplication;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -9,11 +9,12 @@ import org.springframework.boot.web.servlet.support.SpringBootServletInitializer
 public class TfgCiudadesApplication extends SpringBootServletInitializer {
 
     @Override
-    protected SpringApplicationBuilder configure(SpringApplicationBuilder application) {
-        return application.sources(TfgCiudadesApplication.class);
+    protected SpringApplicationBuilder configure(SpringApplicationBuilder builder) {
+        return builder.sources(TfgCiudadesApplication.class);
     }
 
     public static void main(String[] args) {
         SpringApplication.run(TfgCiudadesApplication.class, args);
     }
 }
+
