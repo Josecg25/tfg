@@ -16,13 +16,11 @@ public class EventoController {
         this.eventoService = eventoService;
     }
 
-    // ✔ Todos los eventos
     @GetMapping
     public List<Evento> getAllEventos() {
         return eventoService.getAllEventos();
     }
 
-    // ✔ Eventos por ciudad
     @GetMapping("/{idCiudad}")
     public List<Evento> getEventosByCiudad(@PathVariable int idCiudad) {
         return eventoService.getEventosByCiudad(idCiudad);

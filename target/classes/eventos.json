@@ -1,0 +1,51 @@
+[
+    {
+        "idCiudad": 6,
+        "idCategoria": 1,
+        "idEvento": 3,
+        "titulo": "Espacios de la ciudad de Barcelona donde se realiza cine, teatro y conciertos",
+        "descripcion": "Espacios de la ciudad de Barcelona donde se realiza cine, teatro y conciertos. Incluye auditorios",
+        "url": "https://opendata-ajuntament.barcelona.cat/data/dataset/beeb12bb-b153-45cb-bf4a-0e579f60912d/resource/a837dfd4-6f8d-4c79-9a45-0de486464e25/download"
+    },
+    {
+        "idCiudad": 28,
+        "idCategoria": 1,
+        "idEvento": 1,
+        "titulo": "Monumentos de la ciudad de Madrid",
+        "descripcion": "Los tipos de monumentos incluidos son: estatuas, grupos escultóricos, fuentes y estanques ornamentales, fuentes monumentales, puertas y arcos triunfales, lápidas y placas conmemorativas, laminas de agua y estanque simples y otros varios.",
+        "url": "https://datos.madrid.es/dataset/300356-0-monumentos-ciudad-madrid/resource/300356-2-monumentos-ciudad-madrid-json/download/300356-2-monumentos-ciudad-madrid-json.json"
+    },
+    {
+        "idCiudad": 28,
+        "idCategoria": 2,
+        "idEvento": 2,
+        "titulo": "Sedes. Centros con Espacios Deportivos.",
+        "descripcion": "Recopila información de centros e instalaciones que cuentan con espacios deportivos tanto de ámbito público como privado que están publicados en el portal institucional madrid.es.",
+        "url": "https://datos.madrid.es/dataset/212808-0-espacio-deporte/resource/212808-1-espacio-deporte-json/download/212808-1-espacio-deporte-json.json"
+    },
+    {
+        "idCiudad": 28,
+        "idCategoria": 1,
+        "idEvento": 4,
+        "titulo": "Agenda de actividades y eventos.",
+        "descripcion": "Relación de actividades de distinto tipo que se van a celebrar o que se están celebrando, en centros municipales o asociados la actividad gestionada por el Ayuntamiento. Podrá encontrar así las actividades de Centros Culturales, Socioculturales, Centros Juveniles, Bibliotecas, Centros de Mayores, Museos, Juntas de Distrito, etc.",
+        "url": "https://datos.madrid.es/dataset/300107-0-agenda-actividades-eventos/resource/300107-5-agenda-actividades-eventos-json/download/300107-5-agenda-actividades-eventos-json.json"
+    },
+    {
+        "idCiudad": 28,
+        "idCategoria": 2,
+        "idEvento": 5,
+        "titulo": "Piscinas municipales en la ciudad de Madrid.",
+        "descripcion": "El conjunto de datos “Piscinas municipales en la ciudad de Madrid” proporciona la información de los centros deportivos municipales (o instalaciones deportivas que cuentan con participación municipal) donde existe piscina, ya sea ésta cubierta o al aire libre.
+		En concreto se facilita la siguiente información; el horario de apertura del centro deportivo, el equipamiento, la accesibilidad, la dirección (tipo de vía, nombre de la vía, número, código postal), el barrio y el distrito en el que se encuentran incluyendo el campo de código de ambos, las coordenadas geográficas x e y, latitud y longitud, y los datos de contacto (teléfono, fax, email).",
+        "url": "https://datos.madrid.es/dataset/210227-0-piscinas-publicas/resource/210227-1-piscinas-publicas-json/download/210227-1-piscinas-publicas-json.json"
+    },
+    {
+        "idCiudad": 28,
+        "idCategoria": 1,
+        "idEvento": 6,
+        "titulo": "Cursos y talleres en los centros culturales de los distritos.",
+        "descripcion": "En este conjunto de datos se incluye información relevante sobre los cursos y talleres organizados por los centros culturales de los distritos, cuya duración se corresponde con el curso lectivo (fechas aproximadas: de 1 de octubre a 30 de junio).",
+        "url": "https://datos.madrid.es/dataset/50064-0-talleres-culturales-cursos/resource/50064-20-talleres-culturales-cursos/download/50064-20-talleres-culturales-cursos.json"
+    }
+]
