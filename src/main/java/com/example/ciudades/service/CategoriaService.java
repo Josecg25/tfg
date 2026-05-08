@@ -13,7 +13,7 @@ public class CategoriaService {
             new Categoria(2, "DEPORTE")
     );
 
-    public List<Categoria> getCategorias() {
+    public List<Categoria> getAllCategorias() {
         return categorias;
     }
 }

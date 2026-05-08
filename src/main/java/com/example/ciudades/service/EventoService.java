@@ -9,12 +9,11 @@ import jakarta.annotation.PostConstruct;
 import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.stream.Collectors;
 
 @Service
 public class EventoService {
 
-    private List<Evento> eventos = new ArrayList<>();
+    private List<Evento> eventos;
 
     @PostConstruct
     public void init() {
@@ -23,23 +22,21 @@ public class EventoService {
             InputStream inputStream = getClass().getResourceAsStream("/eventos.json");
 
             eventos = mapper.readValue(inputStream, new TypeReference<List<Evento>>() {});
-            System.out.println("✔ Eventos cargados desde eventos.json: " + eventos.size());
+            System.out.println("✔ eventos.json cargado correctamente");
 
         } catch (Exception e) {
             e.printStackTrace();
-            System.out.println("❌ Error cargando eventos.json");
+            eventos = new ArrayList<>();
         }
     }
 
-    // ✔ Obtener todos los eventos
     public List<Evento> getAllEventos() {
         return eventos;
     }
 
-    // ✔ Obtener eventos filtrados por ciudad
     public List<Evento> getEventosByCiudad(int idCiudad) {
         return eventos.stream()
                 .filter(e -> e.getIdCiudad() == idCiudad)
-                .collect(Collectors.toList());
+                .toList();
     }
 }
