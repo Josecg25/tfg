@@ -9,6 +9,11 @@ public class Evento {
     private String descripcion;
     private String url;
 
+    // ✔ Constructor vacío obligatorio para Jackson
+    public Evento() {
+    }
+
+    // ✔ Constructor completo (opcional pero útil)
     public Evento(int idEvento, int idCiudad, int idCategoria, String titulo, String descripcion, String url) {
         this.idEvento = idEvento;
         this.idCiudad = idCiudad;
@@ -18,13 +23,27 @@ public class Evento {
         this.url = url;
     }
 
-    public Evento() {}
+    public int getIdCiudad() {
+        return idCiudad;
+    }
 
-    public int getIdCiudad() { return idCiudad; }
-    public int getIdCategoria() { return idCategoria; }
-    public int getIdEvento() { return idEvento; }
-    public String getTitulo() { return titulo; }
-    public String getDescripcion() { return descripcion; }
-    public String getUrl() { return url; }
+    public int getIdCategoria() {
+        return idCategoria;
+    }
+
+    public int getIdEvento() {
+        return idEvento;
+    }
+
+    public String getTitulo() {
+        return titulo;
+    }
+
+    public String getDescripcion() {
+        return descripcion;
+    }
+
+    public String getUrl() {
+        return url;
+    }
 }
-

@@ -3,7 +3,6 @@ com\example\ciudades\TfgCiudadesApplication.class
 com\example\ciudades\controller\CiudadController.class
 com\example\ciudades\controller\CategoriaController.class
 com\example\ciudades\controller\OcioYCulturaController.class
-com\example\ciudades\service\EventoService$1.class
 com\example\ciudades\model\Ciudad.class
 com\example\ciudades\service\DeporteService.class
 com\example\ciudades\model\Categoria.class
