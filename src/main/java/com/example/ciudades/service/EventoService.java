@@ -13,7 +13,7 @@ import java.util.List;
 @Service
 public class EventoService {
 
-    private List<Evento> eventos;
+    private List<Evento> eventos = new ArrayList<>();
 
     @PostConstruct
     public void init() {
@@ -22,11 +22,11 @@ public class EventoService {
             InputStream inputStream = getClass().getResourceAsStream("/eventos.json");
 
             eventos = mapper.readValue(inputStream, new TypeReference<List<Evento>>() {});
-            System.out.println("✔ eventos.json cargado correctamente");
+            System.out.println("✔ eventos.json cargado: " + eventos.size());
 
         } catch (Exception e) {
             e.printStackTrace();
-            eventos = new ArrayList<>();
+            System.out.println("❌ Error cargando eventos.json");
         }
     }
 
