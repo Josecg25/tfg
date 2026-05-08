@@ -4,19 +4,30 @@ public class Evento {
 
     private int idCiudad;
     private int idCategoria;
+	private int idEvento;
     private String titulo;
     private String descripcion;
     private String url;
 
-    public Evento(int idCiudad, int idCategoria, String titulo, String descripcion, String url) {
-        this.idCiudad = idCiudad;
+    public Evento(int idEvento, int idCiudad, int idCategoria, String titulo, String descripcion, String url) {
+        this.idEvento = idEvento;
+    	this.idCiudad = idCiudad;
         this.idCategoria = idCategoria;
         this.titulo = titulo;
         this.descripcion = descripcion;
         this.url = url;
     }
+    
 
-    public int getIdCiudad() {
+    public int getIdEvento() {
+		return idEvento;
+	}
+
+	public void setIdEvento(int idEvento) {
+		this.idEvento = idEvento;
+	}
+
+	public int getIdCiudad() {
         return idCiudad;
     }
 
