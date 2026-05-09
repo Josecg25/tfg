@@ -10,7 +10,8 @@ public class CategoriaService {
 
     private final List<Categoria> categorias = List.of(
             new Categoria(1, "OCIO Y CULTURA"),
-            new Categoria(2, "DEPORTE")
+            new Categoria(2, "DEPORTE"),
+            new Categoria(3, "TURISMO") 
     );
 
     public List<Categoria> getAllCategorias() {
