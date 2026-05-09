@@ -15,7 +15,6 @@ public class EventoService {
     @PostConstruct
     public void init() {
 
-        // Barcelona (idCiudad = 6)
         eventos.add(new Evento(
                 3,
                 6,
@@ -25,7 +24,6 @@ public class EventoService {
                 "https://opendata-ajuntament.barcelona.cat/data/dataset/beeb12bb-b153-45cb-bf4a-0e579f60912d/resource/a837dfd4-6f8d-4c79-9a45-0de486464e25/download"
         ));
 
-        // Madrid (idCiudad = 28)
         eventos.add(new Evento(
                 1,
                 28,
@@ -69,6 +67,15 @@ public class EventoService {
                 "Cursos y talleres en los centros culturales de los distritos.",
                 "Información sobre cursos y talleres organizados por centros culturales de los distritos.",
                 "https://datos.madrid.es/dataset/50064-0-talleres-culturales-cursos/resource/50064-20-talleres-culturales-cursos/download/50064-20-talleres-culturales-cursos.json"
+        ));
+
+        eventos.add(new Evento(
+                7,
+                46,
+                3,
+                "Datos de turismo sobre hoteles en la Comunidad Valenciana",
+                "Datos semanales con información de empresas turísticas inscritas en el Registro de Turismo de la Comunitat Valenciana.",
+                "https://dadesobertes.gva.es/es/dataset/dades-turisme-hotels-comunitat-valenciana/resource/71d330c9-85e9-4ad5-94b6-95a07e6c2d51"
         ));
     }
 
